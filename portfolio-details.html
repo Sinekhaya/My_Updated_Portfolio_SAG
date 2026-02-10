@@ -7,34 +7,40 @@
   <title>Portfolio Details | Gontsana Advocate</title>
   <meta name="description" content="Portfolio details of Gontsana Advocate showcasing projects in App, Product, R-Projects, and Educational categories.">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
+    /* Base */
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9; /* keep aligned with index page */
+      background-color: #f0f2f5; /* aligned with home page */
+      color: #333;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
     }
 
+    a {
+      text-decoration: none;
+    }
+
+    /* Header */
     .header {
       padding: 1.5rem;
       background-color: #0d6efd;
       color: #fff;
       text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .header:hover {
+      background-color: #0b5ed7;
     }
 
     .header .logo h1 {
@@ -44,32 +50,34 @@
       color: #fff;
     }
 
-    nav.navmenu ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 1rem;
+    .navmenu ul {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
       flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      list-style: none;
     }
 
-    nav.navmenu a {
+    .navmenu a {
       color: #fff;
-      text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
-    nav.navmenu a:hover {
+    .navmenu a:hover {
+      color: #ffc107;
       text-decoration: underline;
     }
 
+    /* Page Title */
     .page-title {
-      padding: 3rem 0;
-      background: #007bff;
+      padding: 3rem 1rem;
+      background: #0d6efd;
       color: #fff;
       text-align: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
 
     .page-title h1 {
@@ -79,17 +87,32 @@
     }
 
     .breadcrumbs a {
-      color: #fff;
+      color: #ffc107;
       text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    .breadcrumbs a:hover {
+      color: #fff;
     }
 
     /* Category buttons */
     .project-categories {
+      text-align: center;
       margin-bottom: 1.5rem;
     }
 
     .project-categories .btn {
       margin: 0.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #0d6efd;
+      color: #fff;
+      border-color: #0d6efd;
     }
 
     /* Main slider */
@@ -114,53 +137,7 @@
     }
 
     /* Info panel */
-    .portfolio-info {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.5s ease;
-    }
-
-    .portfolio-info.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .portfolio-info h3 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #007bff;
-    }
-
-    .portfolio-info p.tagline {
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 1rem;
-    }
-
-    .portfolio-info ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1rem;
-    }
-
-    .portfolio-info ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    .portfolio-info .btn {
-      display: block;
-      text-align: center;
-      font-weight: 600;
-      padding: 0.75rem;
-      border-radius: 8px;
-    }
-
-    /* Description panel */
+    .portfolio-info,
     .portfolio-description {
       background: #fff;
       padding: 1.5rem;
@@ -172,24 +149,27 @@
       transition: all 0.5s ease;
     }
 
+    .portfolio-info.show,
     .portfolio-description.show {
       opacity: 1;
       transform: translateY(0);
     }
 
+    .portfolio-info h3,
     .portfolio-description h4,
     .portfolio-description h5 {
-      color: #007bff;
-      margin-bottom: 0.5rem;
+      color: #0d6efd;
     }
 
-    .portfolio-description p {
+    .portfolio-info p.tagline {
+      color: #555;
+      font-weight: 500;
+    }
+
+    .portfolio-description p,
+    .portfolio-description ul li {
       line-height: 1.6;
       color: #555;
-    }
-
-    .portfolio-description ul li {
-      margin-bottom: 0.5rem;
     }
 
     /* Thumbnail carousel */
@@ -197,26 +177,32 @@
       margin-top: 1rem;
     }
 
-    .thumb-carousel .swiper-slide {
-      width: 80px;
-      height: 60px;
-      opacity: 0.5;
-      cursor: pointer;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
     .thumb-carousel .swiper-slide-thumb-active {
-      opacity: 1;
+      border: 2px solid #ffc107;
+      opacity: 1 !important;
       transform: scale(1.1);
-      border: 2px solid #007bff;
     }
 
-    .thumb-carousel .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    /* Footer */
+    .footer {
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .footer a {
+      color: #ffc107;
+      margin: 0 0.5rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .footer a:hover {
+      color: #fff;
+      transform: scale(1.1);
     }
 
     /* Responsive */
@@ -231,7 +217,9 @@
 <body>
 
   <header class="header">
-    <a href="index.html" class="logo"><h1>Gontsana Sinekhaya Advocate</h1></a>
+    <a href="index.html" class="logo">
+      <h1>Gontsana Sinekhaya Advocate</h1>
+    </a>
     <nav class="navmenu">
       <ul>
         <li><a href="index.html#hero">Home</a></li>
@@ -255,14 +243,14 @@
     <div class="container">
 
       <!-- Category buttons -->
-      <div class="project-categories text-center">
+      <div class="project-categories">
         <a href="?project=app" class="btn btn-outline-primary">Apps</a>
         <a href="?project=product" class="btn btn-outline-primary">Product</a>
         <a href="?project=rprojects" class="btn btn-outline-primary">R-Dashboards</a>
         <a href="?project=books" class="btn btn-outline-primary">Books</a>
       </div>
 
-      <a href="index.html#portfolio" class="back-to-portfolio btn btn-primary mb-4">← Back to Portfolio</a>
+      <a href="index.html#portfolio" class="btn btn-primary mb-4">← Back to Portfolio</a>
       <div class="row gy-4">
         <div class="col-lg-8">
           <!-- Main slider -->
@@ -287,136 +275,67 @@
     </div>
   </section>
 
-  <footer class="footer text-center py-4">
+  <footer class="footer">
     <p>© 2026 Gontsana Advocate. All rights reserved.</p>
+    <div class="mt-2">
+      <a href="https://x.com/GontsanaAdvoca1" target="_blank"><i class="bi bi-twitter"></i> X</a>
+      <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank"><i class="bi bi-patch-check"></i> Credly</a>
+      <a href="https://github.com/Sinekhaya" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+      <a href="https://www.instagram.com/sinekhaya1997/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+      <a href="https://www.linkedin.com/in/sinekhaya-gontsana-6250a12b4/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+    </div>
   </footer>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
   <script>
-const projects = {
-  app: {
-    category: "Application Development",
-    date: "Feb 2025",
-    tech: "Java, Swing, OOP",
-    slides: [
-      { 
-        title: "Java Calculator Desktop Application",
-        images: ["assets/img/portfolio/app-1.png"], 
-        description: "This NetBeans application is developed to perform arithmetic calculations efficiently.", 
-        outcomes: ["Designed responsive UI layout", "Implemented event-driven button logic"],
-         url: "https://github.com/Sinekhaya/Simple_Caclulator", 
+    const projects = {
+      app: {
+        title: "Application Development",
+        category: "Application Development",
+        tech: "Java, Swing, OOP",
+        date: "Feb 2025",
+        url: "https://github.com/Sinekhaya/Simple_Caclulator",
+        slides: [
+          { title: "Java Calculator Desktop Application", images: ["assets/img/portfolio/app-1.png"], description: "This NetBeans application is developed to perform arithmetic calculations efficiently.", outcomes: ["Designed responsive UI layout", "Implemented event-driven button logic"], url: "https://github.com/Sinekhaya/Simple_Caclulator" },
+          { title: "Java Student Application", images: ["assets/img/portfolio/app-2.png"], description: "Developed in Intellij, Refreshing my knowledge in API development and documentation.", outcomes: ["Application of Java CRUID Application", "Applied OOP principles", "Enhanced error handling and input validation"], url: "https://github.com/Sinekhaya/-Banking-App" }
+        ]
       },
-      { 
-        title: "Java Student Application",
-        images: ["assets/img/portfolio/app-2.png"], 
-        description: "Developed in Intellij, Refreshing my knowledge in API development and documentation for improved backend integration and functionality.", 
-        outcomes: ["Application of Java CRUID Application","Applied OOP principles", "Enhanced error handling and input validation"],
-         url: "https://github.com/Sinekhaya/-Banking-App", 
+      product: {
+        title: "This my Road path",
+        category: "Winning you start it while you still young",
+        tech: "Projects & Web",
+        date: "2016-2023",
+        slides: [
+          { title: "Highschool awards -Bachelor Pass", images: ["assets/img/portfolio/product-1.png"], description: "Captured with my Grade 12A classmates at Makaula Senior Secondary School.", outcomes: ["End of an Era: Grade 12A Memories", "Cherishing Memories from Senior Year"] },
+          { title: "Dynamic Project Sections", images: ["assets/img/portfolio/product-2.jpg"], description: "Projects section dynamically renders content for easy updates.", outcomes: ["Built dynamic content rendering", "Optimized layout for readability"], url: "https://github.com/Sinekhaya/-Banking-App" },
+          { title: "I developed my own Website", images: ["assets/img/portfolio/product-3.png"], description: "Developed my personal website using HTML, CSS, and JavaScript.", outcomes: ["Interactive and Responsive Web Design", "Deployed on Vercel and GitHub"], url: "https://my-updated-portfolio-a6ulbsb2w-sinekhayas-projects.vercel.app/" }
+        ]
       },
-    ]
-  },
-
-  product: {
-    title: "This my Road path",
-    category: "Winning you start it while you still yourng",
-    slides: [
-      { 
-        title: "Highschool awards -Bachelor Pass",
-        date: "2016",
-        images: ["assets/img/portfolio/product-1.png"], 
-        description: "Captured with my Grade 12A classmates at Makaula Senior Secondary School.", 
-        outcomes: ["End of an Era: Grade 12A Memories", "Cherishing Memories from Senior Year"] 
+      rprojects: {
+        title: "R-Projects I Completed",
+        category: "Junior Data Analysis - 4IRI",
+        tech: "R, ggplot2, dplyr",
+        date: "Sep 2025 - Feb 2026",
+        slides: [
+          { title: "Insurance Company dashboard", images: ["assets/img/portfolio/branding-1.png"], description: "Interactive dashboard to visualize and manage key metrics.", outcomes: ["Created by RStudio", "Streamlined Data Monitoring"], url: "https://sinekhaya.shinyapps.io/Claimly_Visual_Dashboard/" },
+          { title: "Tax Company", images: ["assets/img/portfolio/branding-2.png"], description: "Effective visualizations using ggplot2.", outcomes: ["Designed impactful charts", "Facilitated data-driven decision making"], url: "https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/" },
+          { title: "Reporting & Dashboards", images: ["assets/img/portfolio/branding-3.png"], description: "Interactive dashboards and reports for actionable insights.", outcomes: ["Built interactive dashboards", "Translated data into actionable insights"], url: "https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/" }
+        ]
       },
-      { 
-        title: "Dynamic Project Sections",
-        images: ["assets/img/portfolio/product-2.jpg"],
-        url:"https://github.com/Sinekhaya/-Banking-App", 
-        description: "Projects section dynamically renders content for easy updates.", 
-        outcomes: ["Built dynamic content rendering", "Optimized layout for readability"] 
-      },
-      { 
-        title: "I developed my own Website",
-        images: ["assets/img/portfolio/product-3.png"],
-         url:"https://my-updated-portfolio-a6ulbsb2w-sinekhayas-projects.vercel.app/", 
-        description: "Developed my personal website using HTML, CSS, and JavaScript, featuring a responsive design and interactive elements to showcase my projects and skills.", 
-        outcomes: ["Interactive and Responsive Web Design", "This project is deployed in vercel and backuped in Github"] 
+      books: {
+        title: "Educational / Statistical / Programming",
+        category: "Learning Path",
+        tech: "Computer Science & Statistics",
+        date: "2017-2023",
+        slides: [
+          { title: "R Programming Language", images: ["assets/img/portfolio/books-1.jpg"], description: "Multilinear Regression Analysis & Stochastics.", outcomes: ["Statistical Modeling and Analysis", "Data Analysis with R"] },
+          { title: "C++ OOP Projects", images: ["assets/img/portfolio/books-2.jpg"], description: "Classes, inheritance, arrays, linked lists, stacks, queues.", outcomes: ["Foundations of OOP & Data Structures"] },
+          { title: "Java Programming Language", images: ["assets/img/portfolio/books-3.jpg"], description: "Java CRUD applications development.", outcomes: ["Hands-On Java CRUD Development", "Functional Data-Driven Applications"] }
+        ]
       }
-    ]
-  },
-
-  rprojects: {
-    title: "R-Projects I Completed since ",
-    category: "Junior Data Analysis - 4IRI",
-    date: "September 2025 - February 2026",
-    tech: "R, ggplot2, dplyr",
-    url: "#",
-    slides: [
-      { 
-        title: "Isurance Company dashboard",
-        images: ["assets/img/portfolio/branding-1.png"],
-        url: "https://sinekhaya.shinyapps.io/Claimly_Visual_Dashboard/", 
-        description: "Dashboard: An intuitive and interactive dashboard developed to visualize and manage key metrics efficiently, enhancing data-driven decision-making.", 
-        outcomes: ["Created by RStudio to help business Decision making", "Streamlined Data Monitoring and Analytics"] 
-      },
-      { 
-        title: "Tax Company",
-        images: ["assets/img/portfolio/branding-2.png"],
-        url: "https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/", 
-        description: "Effective visualizations using ggplot2 to communicate insights.", 
-        outcomes: ["Designed impactful charts", "Facilitated data-driven decision making"] 
-      },
-      { 
-        title: "Reporting & Dashboards",
-        images: ["assets/img/portfolio/branding-3.png"],
-        url: "https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/", 
-        description: "Interactive dashboards and reports for actionable insights.", 
-        outcomes: ["Built interactive dashboards", "Translated data into actionable insights"] 
-      }
-    ]
-  },
-
-  books: {
-    title: "This is the summery of Books/ Modules that i studied for final year",
-    category: "Educational/ Statistical/ Mathematical / Programming",
-    date: "2017-2023",
-    tech: "Computer Science and Statistics",
-    url: "#",
-    slides: [
-      { 
-        title: "R Programming Language",
-        images: ["assets/img/portfolio/books-1.jpg"], 
-        description: "Learned R programming with a focus on Multilinear Regression Analysis and Stochastics, applying statistical techniques for data modeling and analysis.", 
-        outcomes: ["Statistical Modeling and Analysis in R", "Exploring Multilinear Regression and Stochastics", "Data Analysis and Predictive Modeling with R"] 
-      },
-      { 
-        title: "C++ OOP Projects",
-        images: ["assets/img/portfolio/books-2.jpg"], 
-        description: "Studied C++ and Object-Oriented Programming, as well as Data Structures, using C++ and OOP by DS Malik, gaining hands-on knowledge of classes, inheritance, arrays, linked lists, stacks, queues, and trees.", 
-        outcomes: ["Foundations of Object-Oriented Programming in C++", "Foundations of OOP and Data Structures in C++"] 
-      },
-            { 
-        title: "Java Programming Language",
-        images: ["assets/img/portfolio/books-3.jpg"], 
-        description: "Learned to develop Java CRUD (Create, Read, Update, Delete) applications, gaining hands-on experience in building functional programs for managing data efficiently.", 
-        outcomes: ["Hands-On Java CRUD Development", "Building Functional Data-Driven Applications in Java", "Practical Java Programming for Data Management"] 
-      },
-            { 
-        title: "Probability and Statistical Inference",
-        images: ["assets/img/portfolio/books-5.jpg"], 
-        description: "Studied Probability Theory and Statistical Inference, developing a strong foundation in uncertainty modeling, hypothesis testing, and data-driven decision-making.", 
-        outcomes: ["Statistical hypothesis Analysis", "Exploring Multilinear Probabilities", "Data Analysis and Pediction using probability"] 
-      },
-            { 
-        title: "Advanced Calculus",
-        images: ["assets/img/portfolio/books-7.jpg"], 
-        description: "Studied Calculus with distinctions achieved in three modules, demonstrating strong proficiency in differential, integral, and multivariable calculus concepts.", 
-        outcomes: ["Strong Foundation in Advanced Calculus", "Distinction Intergrated Mathematics", "Distinction in Numerical Analysis"] 
-      },
-    ]
-  }
-};
+    };
 
     const params = new URLSearchParams(window.location.search);
     const projectKey = params.get("project") || "app";
@@ -472,7 +391,7 @@ const projects = {
           <h3>${project.title}</h3>
           <p class="tagline">${project.category} | ${project.tech}</p>
           <ul><li><strong>Date:</strong> ${project.date}</li></ul>
-          <a href="${project.url}" target="_blank" class="btn btn-primary">View the Project</a>
+          <a href="${slide.url || project.url}" target="_blank" class="btn btn-primary">View the Project</a>
         `;
 
         descDiv.innerHTML = `

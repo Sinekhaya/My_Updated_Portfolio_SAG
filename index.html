@@ -533,41 +533,41 @@
 </section><!-- /Resume Section -->
 
 <!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio section py-5" style="background-color: #f8f9fa;">
+<section id="portfolio" class="portfolio section py-5 bg-light">
   <div class="container">
 
     <!-- Section Header -->
     <div class="section-header text-center mb-5">
-      <h2>My Portfolio</h2>
-      <p>Explore some of my recent projects showcasing my skills in software, data analysis, and design.</p>
+      <h2 class="fw-bold">My Portfolio</h2>
+      <p class="text-muted">Explore some of my recent projects showcasing my skills in software, data analysis, and design.</p>
     </div>
 
     <!-- Portfolio Filters -->
-    <ul class="portfolio-filters d-flex justify-content-center mb-5">
-      <li><a href="portfolio-details.html?project=all" class="filter-active">All</a></li>
-      <li><a href="portfolio-details.html?project=app">App</a></li>
-      <li><a href="portfolio-details.html?project=product">Product</a></li>
-      <li><a href="portfolio-details.html?project=branding">R-Dashboards</a></li>
-      <li><a href="portfolio-details.html?project=books">Books</a></li>
+    <ul class="portfolio-filters d-flex justify-content-center gap-3 mb-5 list-unstyled">
+      <li><a href="portfolio-details.html?project=all" class="active badge bg-secondary">All</a></li>
+      <li><a href="portfolio-details.html?project=app" class="badge bg-primary">App</a></li>
+      <li><a href="portfolio-details.html?project=product" class="badge bg-success">Product</a></li>
+      <li><a href="portfolio-details.html?project=branding" class="badge bg-warning text-dark">R-Dashboards</a></li>
+      <li><a href="portfolio-details.html?project=books" class="badge bg-info text-dark">Books</a></li>
     </ul>
 
     <!-- Portfolio Items -->
-    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+    <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-      <!-- Portfolio Card Template -->
+      <!-- App Projects -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
           <img src="assets/img/portfolio/app-1.png" class="img-fluid" alt="Calculator Java App">
           <div class="portfolio-info p-3">
-            <h4>Calculator</h4>
+            <h5 class="fw-bold">Calculator</h5>
             <span class="badge bg-primary mb-2">App</span>
             <p>Java desktop CRUD application with clear and calculate buttons.</p>
             <div class="d-flex justify-content-between">
               <a href="assets/img/portfolio/app-1.png" class="glightbox preview-link" title="Calculator">
-                <i class="bi bi-zoom-in"></i>
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=app" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
@@ -575,57 +575,58 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
           <img src="assets/img/portfolio/app-2.png" class="img-fluid" alt="Student Management System">
           <div class="portfolio-info p-3">
-            <h4>Student Management System</h4>
+            <h5 class="fw-bold">Student Management System</h5>
             <span class="badge bg-primary mb-2">App</span>
             <p>Console-based Java CRUD application to manage student records efficiently.</p>
             <div class="d-flex justify-content-between">
               <a href="assets/img/portfolio/app-2.png" class="glightbox preview-link" title="Student Management">
-                <i class="bi bi-zoom-in"></i>
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=app" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
-          <img src="assets/img/portfolio/app-2.png" class="img-fluid" alt="Student Management System">
-          <div class="portfolio-info p-3">
-            <h4>Student Management System</h4>
-            <span class="badge bg-primary mb-2">App</span>
-            <p>Console-based Java CRUD application to manage student records efficiently.</p>
-            <div class="d-flex justify-content-between">
-              <a href="assets/img/portfolio/app-2.png" class="glightbox preview-link" title="Student Management">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-              <a href="portfolio-details.html?project=app" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      
-
+      <!-- Product Projects -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-product">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
           <img src="assets/img/portfolio/product-1.png" class="img-fluid" alt="Complete Website">
           <div class="portfolio-info p-3">
-            <h4>Complete Website</h4>
+            <h5 class="fw-bold">Complete Website</h5>
             <span class="badge bg-success mb-2">Product</span>
             <p>Built using HTML, CSS, and JavaScript. Hosted on Vercel.</p>
             <div class="d-flex justify-content-between">
               <a href="assets/img/portfolio/product-1.png" class="glightbox preview-link" title="Complete Website">
-                <i class="bi bi-zoom-in"></i>
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=product" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- R-Dashboard Projects -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-branding">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
+          <img src="assets/img/portfolio/branding-1.png" class="img-fluid" alt="RShiny Dashboard">
+          <div class="portfolio-info p-3">
+            <h5 class="fw-bold">RShiny-Dashboards</h5>
+            <span class="badge bg-warning text-dark mb-2">R-Dashboards</span>
+            <p>Reflects my commitment to innovation, clean design, and impactful solutions.</p>
+            <div class="d-flex justify-content-between">
+              <a href="assets/img/portfolio/branding-1.png" class="glightbox preview-link" title="RShiny Dashboard">
+                <i class="bi bi-zoom-in fs-5"></i>
+              </a>
+              <a href="portfolio-details.html?project=branding" class="details-link" title="More Details">
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
@@ -633,55 +634,38 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-branding">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
-          <img src="assets/img/portfolio/branding-1.png" class="img-fluid" alt="Branding Project">
-          <div class="portfolio-info p-3">
-            <h4>RShiny-Dashboards</h4>
-            <span class="badge bg-warning mb-2">R-Dashboards</span>
-            <p>Reflects my commitment to innovation, clean design, and impactful solutions.</p>
-            <div class="d-flex justify-content-between">
-              <a href="assets/img/portfolio/branding-1.png" class="glightbox preview-link" title="Branding">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-              <a href="portfolio-details.html?project=branding" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-books">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
-          <img src="assets/img/portfolio/books-7.jpg" class="img-fluid" alt="Data Structures C++">
-          <div class="portfolio-info p-3">
-            <h4>Calculus</h4>
-            <span class="badge bg-info mb-2">Books</span>
-            <p>Studied advanced calculus using James Stewart’s Calculus, applying concepts to both mathematics and statistical analysis for rigorous problem solving.</p>
-            <div class="d-flex justify-content-between">
-              <a href="assets/img/portfolio/books-7.jpg" class="glightbox preview-link" title="Data Structures">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-              <a href="portfolio-details.html?project=books" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-            <div class="col-lg-4 col-md-6 portfolio-item filter-branding">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
           <img src="assets/img/portfolio/branding-2.png" class="img-fluid" alt="Branding Project">
           <div class="portfolio-info p-3">
-            <h4>Branding</h4>
-            <span class="badge bg-warning mb-2">Branding</span>
+            <h5 class="fw-bold">Branding</h5>
+            <span class="badge bg-warning text-dark mb-2">R-Dashboards</span>
             <p>Reflects my commitment to innovation, clean design, and impactful solutions.</p>
             <div class="d-flex justify-content-between">
               <a href="assets/img/portfolio/branding-2.png" class="glightbox preview-link" title="Branding">
-                <i class="bi bi-zoom-in"></i>
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=branding" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Books Projects -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-books">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
+          <img src="assets/img/portfolio/books-7.jpg" class="img-fluid" alt="Calculus">
+          <div class="portfolio-info p-3">
+            <h5 class="fw-bold">Calculus</h5>
+            <span class="badge bg-info text-dark mb-2">Books</span>
+            <p>Studied advanced calculus using James Stewart’s Calculus, applying concepts to mathematics and statistical analysis.</p>
+            <div class="d-flex justify-content-between">
+              <a href="assets/img/portfolio/books-7.jpg" class="glightbox preview-link" title="Calculus">
+                <i class="bi bi-zoom-in fs-5"></i>
+              </a>
+              <a href="portfolio-details.html?project=books" class="details-link" title="More Details">
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
@@ -689,72 +673,75 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-books">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
-          <img src="assets/img/portfolio/books-5.jpg" class="img-fluid" alt="Data Structures C++">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
+          <img src="assets/img/portfolio/books-5.jpg" class="img-fluid" alt="Probability & Stats">
           <div class="portfolio-info p-3">
-            <h4>Probability Theory and Statistical Inference</h4>
-            <span class="badge bg-info mb-2">Books</span>
-            <p>Hands-on implementation of essential Probability Theory and Statistical Inference</p>
+            <h5 class="fw-bold">Probability Theory & Statistical Inference</h5>
+            <span class="badge bg-info text-dark mb-2">Books</span>
+            <p>Hands-on implementation of essential Probability Theory and Statistical Inference.</p>
             <div class="d-flex justify-content-between">
-              <a href="assets/img/portfolio/books-5.jpg" class="glightbox preview-link" title="Data Structures">
-                <i class="bi bi-zoom-in"></i>
+              <a href="assets/img/portfolio/books-5.jpg" class="glightbox preview-link" title="Probability & Stats">
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=books" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-books">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
-          <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="Data Structures C++">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-books">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
+          <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="Java Programming">
           <div class="portfolio-info p-3">
-            <h4>Java Programming</h4>
-            <span class="badge bg-info mb-2">Books</span>
-            <p>Hands-on implementation of essential Java for building Cruid Apps.</p>
+            <h5 class="fw-bold">Java Programming</h5>
+            <span class="badge bg-info text-dark mb-2">Books</span>
+            <p>Hands-on implementation of essential Java for building CRUD Apps.</p>
             <div class="d-flex justify-content-between">
-              <a href="assets/img/portfolio/books-3.jpg" class="glightbox preview-link" title="Data Structures">
-                <i class="bi bi-zoom-in"></i>
+              <a href="assets/img/portfolio/books-3.jpg" class="glightbox preview-link" title="Java Programming">
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=books" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-books">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
-          <img src="assets/img/portfolio/books-6.webp" class="img-fluid" alt="Data Structures C++">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-books">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
+          <img src="assets/img/portfolio/books-6.webp" class="img-fluid" alt="Time Series Analysis">
           <div class="portfolio-info p-3">
-            <h4> Time Series analysis and focasting</h4>
-            <span class="badge bg-info mb-2">Books</span>
-            <p>Hands-on implementation of Time Series analysis and focasting</p>
+            <h5 class="fw-bold">Time Series Analysis & Forecasting</h5>
+            <span class="badge bg-info text-dark mb-2">Books</span>
+            <p>Hands-on implementation of Time Series analysis and forecasting techniques.</p>
             <div class="d-flex justify-content-between">
-              <a href="assets/img/portfolio/books-6.webp" class="glightbox preview-link" title="Data Structures">
-                <i class="bi bi-zoom-in"></i>
+              <a href="assets/img/portfolio/books-6.webp" class="glightbox preview-link" title="Time Series Analysis">
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=books" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-books">
-        <div class="portfolio-content h-100 shadow-sm rounded position-relative overflow-hidden">
-          <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="Data Structures C++">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-books">
+        <div class="portfolio-card shadow-sm rounded overflow-hidden h-100 position-relative">
+          <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="R Programming">
           <div class="portfolio-info p-3">
-            <h4>R Programming</h4>
-            <span class="badge bg-info mb-2">Books</span>
+            <h5 class="fw-bold">R Programming</h5>
+            <span class="badge bg-info text-dark mb-2">Books</span>
             <p>Hands-on implementation of essential R for Data Science and Analysis.</p>
             <div class="d-flex justify-content-between">
-              <a href="assets/img/portfolio/books-1.jpg" class="glightbox preview-link" title="Data Structures">
-                <i class="bi bi-zoom-in"></i>
+              <a href="assets/img/portfolio/books-1.jpg" class="glightbox preview-link" title="R Programming">
+                <i class="bi bi-zoom-in fs-5"></i>
               </a>
               <a href="portfolio-details.html?project=books" class="details-link" title="More Details">
-                <i class="bi bi-link-45deg"></i>
+                <i class="bi bi-link-45deg fs-5"></i>
               </a>
             </div>
           </div>
@@ -765,6 +752,20 @@
 
   </div>
 </section><!-- End Portfolio Section -->
+
+<!-- ======= Portfolio Card Hover Effect CSS ======= -->
+<style>
+.portfolio-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.portfolio-info h5 {
+  min-height: 3em; /* Keeps cards uniform */
+}
+</style>
 
 <!-- ======= Services Section ======= -->
 <section id="services" class="services section py-5" style="background-color: #f8f9fa;">
