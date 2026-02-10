@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Details | Gontsana Advocate</title>
-  <meta name="description" content="Portfolio details of Gontsana Advocate showcasing projects in App, Product, Branding, and Educational categories.">
+  <meta name="description" content="Portfolio details of Gontsana Advocate showcasing projects in App, Product, R-Projects, and Educational categories.">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -25,251 +25,467 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Custom styles for Portfolio Details */
-    .portfolio-details-page {
-      background-color: #f9f9f9;
-      color: #333;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9; /* keep aligned with index page */
     }
 
-    .back-to-portfolio {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 8px 16px;
-      background: #0d6efd;
+    .header {
+      padding: 1.5rem;
+      background-color: #0d6efd;
       color: #fff;
-      border-radius: 6px;
+      text-align: center;
+    }
+
+    .header .logo h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0;
+      color: #fff;
+    }
+
+    nav.navmenu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav.navmenu a {
+      color: #fff;
       text-decoration: none;
+      font-weight: 500;
       transition: 0.3s;
     }
 
-    .back-to-portfolio:hover {
-      background: #0b5ed7;
-      text-decoration: none;
+    nav.navmenu a:hover {
+      text-decoration: underline;
+    }
+
+    .page-title {
+      padding: 3rem 0;
+      background: #007bff;
+      color: #fff;
+      text-align: center;
+    }
+
+    .page-title h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .breadcrumbs a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Category buttons */
+    .project-categories {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-categories .btn {
+      margin: 0.2rem;
+    }
+
+    /* Main slider */
+    .portfolio-details-slider {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1.5rem;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      max-height: 450px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .swiper-slide img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    /* Info panel */
+    .portfolio-info {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    .portfolio-info.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .portfolio-info h3 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #007bff;
+    }
+
+    .portfolio-info p.tagline {
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 1rem;
     }
 
     .portfolio-info ul {
       list-style: none;
       padding: 0;
+      margin-bottom: 1rem;
     }
 
     .portfolio-info ul li {
-      margin-bottom: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-info .btn {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      padding: 0.75rem;
+      border-radius: 8px;
+    }
+
+    /* Description panel */
+    .portfolio-description {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    .portfolio-description.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .portfolio-description h4,
+    .portfolio-description h5 {
+      color: #007bff;
+      margin-bottom: 0.5rem;
     }
 
     .portfolio-description p {
-      font-size: 1.05rem;
       line-height: 1.6;
+      color: #555;
     }
 
-    .swiper-slide img {
+    .portfolio-description ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Thumbnail carousel */
+    .thumb-carousel {
+      margin-top: 1rem;
+    }
+
+    .thumb-carousel .swiper-slide {
+      width: 80px;
+      height: 60px;
+      opacity: 0.5;
+      cursor: pointer;
       border-radius: 8px;
-      max-height: 500px;
-      object-fit: cover;
-      width: 100%;
+      overflow: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      .swiper-slide img {
-        max-height: 300px;
+    .thumb-carousel .swiper-slide-thumb-active {
+      opacity: 1;
+      transform: scale(1.1);
+      border: 2px solid #007bff;
+    }
+
+    .thumb-carousel .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .row.gy-4 {
+        flex-direction: column-reverse;
       }
     }
   </style>
 </head>
 
-<body class="portfolio-details-page">
+<body>
 
-  <!-- Header -->
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="Gontsana Advocate" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">Gontsana Sinekhaya Advocate</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
+  <header class="header">
+    <a href="index.html" class="logo"><h1>Gontsana Sinekhaya Advocate</h1></a>
+    <nav class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#resume">Resume</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="main">
+  <div class="page-title">
+    <h1>Projects and Learning Path</h1>
+    <nav class="breadcrumbs">
+      <a href="index.html">Home</a> / Portfolio Details
+    </nav>
+  </div>
 
-    <!-- Page Title -->
-    <div class="page-title dark-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
-          </ol>
-        </nav>
+  <section id="portfolio-details" class="portfolio-details section py-5">
+    <div class="container">
+
+      <!-- Category buttons -->
+      <div class="project-categories text-center">
+        <a href="?project=app" class="btn btn-outline-primary">Apps</a>
+        <a href="?project=product" class="btn btn-outline-primary">Product</a>
+        <a href="?project=rprojects" class="btn btn-outline-primary">R-Dashboards</a>
+        <a href="?project=books" class="btn btn-outline-primary">Books</a>
       </div>
-    </div>
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <!-- Back to Portfolio -->
-        <a href="index.html#portfolio" class="back-to-portfolio"><i class="bi bi-arrow-left"></i> Back to Portfolio</a>
-
-        <div class="row gy-4">
-
-          <!-- Slider -->
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-              <div class="swiper-wrapper align-items-center" id="portfolio-slider">
-                <!-- Slides inserted dynamically -->
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
+      <a href="index.html#portfolio" class="back-to-portfolio btn btn-primary mb-4">← Back to Portfolio</a>
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <!-- Main slider -->
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper" id="portfolio-slider"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
 
-          <!-- Project Info -->
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200" id="portfolio-info"></div>
-            <div class="portfolio-description mt-3" data-aos="fade-up" data-aos-delay="300" id="portfolio-description"></div>
+          <!-- Thumbnail carousel -->
+          <div class="thumb-carousel swiper mt-3">
+            <div class="swiper-wrapper" id="thumb-slider"></div>
           </div>
+        </div>
 
+        <div class="col-lg-4">
+          <div class="portfolio-info" id="portfolio-info"></div>
+          <div class="portfolio-description" id="portfolio-description"></div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <div class="copyright text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">MyPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits text-center">
-        Designed by <a href="https://bootstrapmade.com/">Sinekhaya Advocate Gontsana</a>
-      </div>
     </div>
+  </section>
+
+  <footer class="footer text-center py-4">
+    <p>© 2026 Gontsana Advocate. All rights reserved.</p>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-
-  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Dynamic Portfolio Script -->
   <script>
-    const projects = {
-      app: {
-        title: "Calculator Java App",
-        category: "App",
-        client: "Personal Project",
-        date: "Feb, 2025",
-        url: "https://github.com/Sinekhaya/Simple_Caclulator",
-        description: "Java desktop CRUD application with clear and calculate buttons.",
-        images: ["assets/img/portfolio/app-1.png", "assets/img/portfolio/app-2.png", "assets/img/portfolio/app-3.jpg"]
+const projects = {
+  app: {
+    category: "Application Development",
+    date: "Feb 2025",
+    tech: "Java, Swing, OOP",
+    slides: [
+      { 
+        title: "Java Calculator Desktop Application",
+        images: ["assets/img/portfolio/app-1.png"], 
+        description: "This NetBeans application is developed to perform arithmetic calculations efficiently.", 
+        outcomes: ["Designed responsive UI layout", "Implemented event-driven button logic"],
+         url: "https://github.com/Sinekhaya/Simple_Caclulator", 
       },
-      product: {
-        title: "Complete Website",
-        category: "Product",
-        client: "Personal Project",
-        date: "Mar, 2025",
-        url: "https://sinekhaya-advocate-gontsana-portfol.vercel.app/",
-        description: "Built using HTML, CSS, and JavaScript. Hosted on Vercel.",
-        images: ["assets/img/portfolio/product-1.png", "assets/img/portfolio/product-2.jpg", "assets/img/portfolio/product-3.jpg"]
+      { 
+        title: "Java Student Application",
+        images: ["assets/img/portfolio/app-2.png"], 
+        description: "Developed in Intellij, Refreshing my knowledge in API development and documentation for improved backend integration and functionality.", 
+        outcomes: ["Application of Java CRUID Application","Applied OOP principles", "Enhanced error handling and input validation"],
+         url: "https://github.com/Sinekhaya/-Banking-App", 
       },
-      branding: {
-        title: "Branding Project",
-        category: "Branding",
-        client: "Personal Project",
-        date: "Apr, 2025",
-        url: "#",
-        description: "Reflects my commitment to innovation, clean design, and impactful solutions.",
-        images: ["assets/img/portfolio/branding-1.png", "assets/img/portfolio/branding-2.png","assets/img/portfolio/branding-3.png"]
-      },
-      books: {
-        title: "Python & C++ Projects",
-        category: "Books / Educational",
-        client: "Personal Project",
-        date: "May, 2025",
-        url: "#",
-        description: "Hands-on approach to implementing data structures, algorithms, and data analysis projects.",
-        images: ["assets/img/portfolio/books-1.jpg", "assets/img/portfolio/books-2.jpg", "assets/img/portfolio/books-3.jpg", "assets/img/portfolio/books-4.jpg","assets/img/portfolio/books-5.jpg","assets/img/portfolio/books-6.webp","assets/img/portfolio/books-7.jpg"]
-      }
-    };
+    ]
+  },
 
-    // Get project from URL
+  product: {
+    title: "This my Road path",
+    category: "Winning you start it while you still yourng",
+    slides: [
+      { 
+        title: "Highschool awards -Bachelor Pass",
+        date: "2016",
+        images: ["assets/img/portfolio/product-1.png"], 
+        description: "Captured with my Grade 12A classmates at Makaula Senior Secondary School.", 
+        outcomes: ["End of an Era: Grade 12A Memories", "Cherishing Memories from Senior Year"] 
+      },
+      { 
+        title: "Dynamic Project Sections",
+        images: ["assets/img/portfolio/product-2.jpg"],
+        url:"https://github.com/Sinekhaya/-Banking-App", 
+        description: "Projects section dynamically renders content for easy updates.", 
+        outcomes: ["Built dynamic content rendering", "Optimized layout for readability"] 
+      },
+      { 
+        title: "I developed my own Website",
+        images: ["assets/img/portfolio/product-3.png"],
+         url:"https://my-updated-portfolio-a6ulbsb2w-sinekhayas-projects.vercel.app/", 
+        description: "Developed my personal website using HTML, CSS, and JavaScript, featuring a responsive design and interactive elements to showcase my projects and skills.", 
+        outcomes: ["Interactive and Responsive Web Design", "This project is deployed in vercel and backuped in Github"] 
+      }
+    ]
+  },
+
+  rprojects: {
+    title: "R-Projects I Completed since ",
+    category: "Junior Data Analysis - 4IRI",
+    date: "September 2025 - February 2026",
+    tech: "R, ggplot2, dplyr",
+    url: "#",
+    slides: [
+      { 
+        title: "Isurance Company dashboard",
+        images: ["assets/img/portfolio/branding-1.png"],
+        url: "https://sinekhaya.shinyapps.io/Claimly_Visual_Dashboard/", 
+        description: "Dashboard: An intuitive and interactive dashboard developed to visualize and manage key metrics efficiently, enhancing data-driven decision-making.", 
+        outcomes: ["Created by RStudio to help business Decision making", "Streamlined Data Monitoring and Analytics"] 
+      },
+      { 
+        title: "Tax Company",
+        images: ["assets/img/portfolio/branding-2.png"],
+        url: "https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/", 
+        description: "Effective visualizations using ggplot2 to communicate insights.", 
+        outcomes: ["Designed impactful charts", "Facilitated data-driven decision making"] 
+      },
+      { 
+        title: "Reporting & Dashboards",
+        images: ["assets/img/portfolio/branding-3.png"],
+        url: "https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/", 
+        description: "Interactive dashboards and reports for actionable insights.", 
+        outcomes: ["Built interactive dashboards", "Translated data into actionable insights"] 
+      }
+    ]
+  },
+
+  books: {
+    title: "This is the summery of Books/ Modules that i studied for final year",
+    category: "Educational/ Statistical/ Mathematical / Programming",
+    date: "2017-2023",
+    tech: "Computer Science and Statistics",
+    url: "#",
+    slides: [
+      { 
+        title: "R Programming Language",
+        images: ["assets/img/portfolio/books-1.jpg"], 
+        description: "Learned R programming with a focus on Multilinear Regression Analysis and Stochastics, applying statistical techniques for data modeling and analysis.", 
+        outcomes: ["Statistical Modeling and Analysis in R", "Exploring Multilinear Regression and Stochastics", "Data Analysis and Predictive Modeling with R"] 
+      },
+      { 
+        title: "C++ OOP Projects",
+        images: ["assets/img/portfolio/books-2.jpg"], 
+        description: "Studied C++ and Object-Oriented Programming, as well as Data Structures, using C++ and OOP by DS Malik, gaining hands-on knowledge of classes, inheritance, arrays, linked lists, stacks, queues, and trees.", 
+        outcomes: ["Foundations of Object-Oriented Programming in C++", "Foundations of OOP and Data Structures in C++"] 
+      },
+            { 
+        title: "Java Programming Language",
+        images: ["assets/img/portfolio/books-3.jpg"], 
+        description: "Learned to develop Java CRUD (Create, Read, Update, Delete) applications, gaining hands-on experience in building functional programs for managing data efficiently.", 
+        outcomes: ["Hands-On Java CRUD Development", "Building Functional Data-Driven Applications in Java", "Practical Java Programming for Data Management"] 
+      },
+            { 
+        title: "Probability and Statistical Inference",
+        images: ["assets/img/portfolio/books-5.jpg"], 
+        description: "Studied Probability Theory and Statistical Inference, developing a strong foundation in uncertainty modeling, hypothesis testing, and data-driven decision-making.", 
+        outcomes: ["Statistical hypothesis Analysis", "Exploring Multilinear Probabilities", "Data Analysis and Pediction using probability"] 
+      },
+            { 
+        title: "Advanced Calculus",
+        images: ["assets/img/portfolio/books-7.jpg"], 
+        description: "Studied Calculus with distinctions achieved in three modules, demonstrating strong proficiency in differential, integral, and multivariable calculus concepts.", 
+        outcomes: ["Strong Foundation in Advanced Calculus", "Distinction Intergrated Mathematics", "Distinction in Numerical Analysis"] 
+      },
+    ]
+  }
+};
+
     const params = new URLSearchParams(window.location.search);
-    const projectKey = params.get('project') || "app"; // default
+    const projectKey = params.get("project") || "app";
     const project = projects[projectKey];
 
     if (project) {
-      // Slider
-      const slider = document.getElementById('portfolio-slider');
-      project.images.forEach(img => {
-        const slide = document.createElement('div');
-        slide.className = "swiper-slide";
-        slide.innerHTML = `<img src="${img}" class="img-fluid" alt="${project.title}">`;
-        slider.appendChild(slide);
+      const sliderWrapper = document.getElementById("portfolio-slider");
+      const thumbWrapper = document.getElementById("thumb-slider");
+      const infoDiv = document.getElementById("portfolio-info");
+      const descDiv = document.getElementById("portfolio-description");
+
+      sliderWrapper.innerHTML = "";
+      thumbWrapper.innerHTML = "";
+
+      project.slides.forEach((slide, index) => {
+        slide.images.forEach(img => {
+          const div = document.createElement("div");
+          div.className = "swiper-slide";
+          div.dataset.index = index;
+          div.innerHTML = `<img src="${img}" alt="${project.title} - Slide ${index + 1}">`;
+          sliderWrapper.appendChild(div);
+
+          const thumbDiv = document.createElement("div");
+          thumbDiv.className = "swiper-slide";
+          thumbDiv.innerHTML = `<img src="${img}" alt="${project.title} - Thumb ${index + 1}">`;
+          thumbWrapper.appendChild(thumbDiv);
+        });
       });
 
-      // Swiper init
-      new Swiper('.portfolio-details-slider', {
-        loop: true,
+      const thumbSwiper = new Swiper(".thumb-carousel", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        watchSlidesProgress: true,
+        breakpoints: { 576: { slidesPerView: 4 }, 768: { slidesPerView: 5 } }
+      });
+
+      const mainSwiper = new Swiper(".portfolio-details-slider", {
+        loop: false,
         speed: 600,
-        autoplay: { delay: 5000 },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: { el: '.swiper-pagination', clickable: true }
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        thumbs: { swiper: thumbSwiper }
       });
 
-      // Info
-      const infoDiv = document.getElementById('portfolio-info');
-      infoDiv.innerHTML = `
-        <h3>Project Information</h3>
-        <ul>
-          <li><strong>Title</strong>: ${project.title}</li>
-          <li><strong>Category</strong>: ${project.category}</li>
-          <li><strong>Client</strong>: ${project.client}</li>
-          <li><strong>Project Date</strong>: ${project.date}</li>
-          <li><strong>Project URL</strong>: <a href="${project.url}" target="_blank">${project.url}</a></li>
-        </ul>
-      `;
+      function updateInfo(slideIndex) {
+        const slide = project.slides[slideIndex];
+        infoDiv.classList.remove("show");
+        descDiv.classList.remove("show");
+        setTimeout(() => infoDiv.classList.add("show"), 100);
+        setTimeout(() => descDiv.classList.add("show"), 300);
 
-      // Description
-      const descDiv = document.getElementById('portfolio-description');
-      descDiv.innerHTML = `<p>${project.description}</p>`;
+        infoDiv.innerHTML = `
+          <h3>${project.title}</h3>
+          <p class="tagline">${project.category} | ${project.tech}</p>
+          <ul><li><strong>Date:</strong> ${project.date}</li></ul>
+          <a href="${project.url}" target="_blank" class="btn btn-primary">View the Project</a>
+        `;
+
+        descDiv.innerHTML = `
+          <h4>Slide Details</h4>
+          <p>${slide.description}</p>
+          <h5>Key Outcomes</h5>
+          <ul>${slide.outcomes.map(o => `<li>${o}</li>`).join("")}</ul>
+        `;
+      }
+
+      updateInfo(0);
+      mainSwiper.on("slideChange", () => updateInfo(mainSwiper.realIndex));
     }
   </script>
-
 </body>
 </html>

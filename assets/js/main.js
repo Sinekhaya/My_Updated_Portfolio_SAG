@@ -1,102 +1,66 @@
 /**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Enhanced & Polished JS for Sinekhaya Advocate Portfolio
+ * Maintains full compatibility while improving UX & animations
+ */
 
 (function() {
   "use strict";
 
-  /**
-   * Header toggle
-   */
-  const headerToggleBtn = document.querySelector('.header-toggle');
+  /* Helper Functions */
+  const select = (el, all = false) => all ? [...document.querySelectorAll(el)] : document.querySelector(el);
+  const on = (type, el, listener, all = false) => {
+    const elements = select(el, all);
+    if (!elements) return;
+    all ? elements.forEach(e => e.addEventListener(type, listener)) : elements.addEventListener(type, listener);
+  };
 
-  function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
-  }
-  headerToggleBtn.addEventListener('click', headerToggle);
+  /* Header toggle */
+  const header = select('#header');
+  const headerToggleBtn = select('.header-toggle');
+  const toggleHeader = () => {
+    header?.classList.toggle('header-show');
+    headerToggleBtn?.classList.toggle('bi-list');
+    headerToggleBtn?.classList.toggle('bi-x');
+  };
+  on('click', '.header-toggle', toggleHeader);
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
-        headerToggle();
-      }
-    });
-  });
+  /* Close mobile nav on link click */
+  on('click', '#navmenu a', () => {
+    if (header?.classList.contains('header-show')) toggleHeader();
+  }, true);
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
+  /* Dropdown toggle for mobile nav */
+  on('click', '.navmenu .toggle-dropdown', function(e) {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    this.parentNode.classList.toggle('active');
+    this.parentNode.nextElementSibling?.classList.toggle('dropdown-active');
+    e.stopImmediatePropagation();
+  }, true);
+
+  /* Preloader */
+  const preloader = select('#preloader');
+  window.addEventListener('load', () => preloader?.remove());
+
+  /* Scroll top button */
+  const scrollTop = select('.scroll-top');
+  const toggleScrollTop = () => scrollTop?.classList.toggle('active', window.scrollY > 100);
+  on('click', '.scroll-top', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', toggleScrollTop);
+  window.addEventListener('load', toggleScrollTop);
+
+  /* AOS animations */
+  window.addEventListener('load', () => {
+    if (window.AOS) AOS.init({ duration: 700, easing: 'ease-in-out', once: true, mirror: false });
   });
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Init typed.js
-   */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
+  /* Typed.js */
+  const typedEl = select('.typed');
+  if (typedEl && window.Typed) {
     new Typed('.typed', {
-      strings: typed_strings,
+      strings: typedEl.dataset.typedItems.split(','),
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
@@ -104,123 +68,90 @@
     });
   }
 
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
+  /* PureCounter */
+  if (window.PureCounter) new PureCounter();
 
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
+  /* Skills animation (Waypoint) */
+  select('.skills-animation', true).forEach(skill => {
     new Waypoint({
-      element: item,
+      element: skill,
       offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
+      handler: () => skill.querySelectorAll('.progress-bar').forEach(bar => {
+        bar.style.width = bar.getAttribute('aria-valuenow') + '%';
+      })
     });
   });
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  /* GLightbox */
+  if (window.GLightbox) GLightbox({ selector: '.glightbox' });
 
-  /**
-   * Init isotope layout and filters (FIXED)
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+  /* Isotope with smooth scroll to filtered items */
+  select('.isotope-layout', true).forEach(layout => {
+    const container = layout.querySelector('.isotope-container');
+    let iso;
+    const layoutMode = layout.dataset.layout || 'masonry';
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout
-      });
+    imagesLoaded(container, () => {
+      iso = new Isotope(container, { itemSelector: '.isotope-item', layoutMode });
     });
 
-    // Fixed portfolio filters
-    isotopeItem.querySelectorAll('.portfolio-filters li').forEach(function(filterLi) {
-      filterLi.addEventListener('click', function() {
-        // Remove active class from all filters
-        isotopeItem.querySelectorAll('.portfolio-filters li').forEach(f => f.classList.remove('filter-active'));
-        this.classList.add('filter-active');
+    layout.querySelectorAll('.portfolio-filters li').forEach(filter => {
+      filter.addEventListener('click', () => {
+        layout.querySelectorAll('.portfolio-filters li').forEach(f => f.classList.remove('filter-active'));
+        filter.classList.add('filter-active');
+        iso?.arrange({ filter: filter.dataset.filter });
 
-        // Arrange isotope items
-        const filterValue = this.getAttribute('data-filter');
-        initIsotope.arrange({ filter: filterValue });
-
-        // Optional: scroll to portfolio section
-        document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth' });
+        // Smooth scroll to first visible item in filtered portfolio
+        const firstItem = container.querySelector('.isotope-item:not(.isotope-hidden)');
+        firstItem?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   });
 
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
+  /* Swiper sliders */
+  window.addEventListener('load', () => {
+    select('.init-swiper', true).forEach(swiperEl => {
+      const configEl = swiperEl.querySelector('.swiper-config');
+      const config = configEl ? JSON.parse(configEl.innerHTML.trim()) : {};
+      new Swiper(swiperEl, config);
     });
+  });
+
+  /* Portfolio details fade-in animation (if using portfolio-details.html) */
+  const portfolioInfo = select('#portfolio-info');
+  const portfolioDesc = select('#portfolio-description');
+  if (portfolioInfo && portfolioDesc) {
+    const fadeInElements = () => {
+      portfolioInfo.classList.add('show');
+      portfolioDesc.classList.add('show');
+    };
+    window.addEventListener('load', fadeInElements);
   }
 
-  window.addEventListener("load", initSwiper);
-
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
-    }
-  });
-
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
+  /* Scrollspy navigation */
+  const navLinks = select('.navmenu a', true);
+  const updateNav = () => {
+    const scrollPos = window.scrollY + 200;
+    navLinks.forEach(link => {
+      if (!link.hash) return;
+      const section = select(link.hash);
       if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
+      const isActive = scrollPos >= section.offsetTop && scrollPos <= (section.offsetTop + section.offsetHeight);
+      link.classList.toggle('active', isActive);
+    });
+  };
+  window.addEventListener('scroll', updateNav);
+  window.addEventListener('load', updateNav);
+
+  /* Correct hash scrolling offset */
+  window.addEventListener('load', () => {
+    if (!window.location.hash) return;
+    const section = select(window.location.hash);
+    if (!section) return;
+    setTimeout(() => {
+      const offset = parseInt(getComputedStyle(section).scrollMarginTop || 0);
+      window.scrollTo({ top: section.offsetTop - offset, behavior: 'smooth' });
+    }, 100);
+  });
 
 })();
