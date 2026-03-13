@@ -232,35 +232,59 @@
           <!-- Personal Info Grid -->
           <div class="row personal-info mb-4">
 
-            <!-- Left Column -->
-            <div class="col-md-6 mb-3">
-              <ul class="list-unstyled">
-                <li><strong>Data Projects:</strong>
-                  <ul style="padding-left: 20px;">
-                    <li>1. <a href="https://sinekhaya.shinyapps.io/Claimly_Visual_Dashboard/" target="_blank">Claimly Visual Dashboard</a></li>
-                    <li>2. <a href="https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/" target="_blank">Tshiamo Survey Dashboard</a></li>
-                  </ul>
-                </li>
-                <li><strong>Birthday:</strong> 20 November 1997</li>
-                <li><strong>Phone:</strong> +27 764 054 464</li>
-                <li><strong>City:</strong> Johannesburg, RSA</li>
-              </ul>
-            </div>
+           <div class="row gy-4">
 
-            <!-- Right Column -->
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li><strong>Age:</strong> 28</li>
-                <li><strong>Email:</strong> <a href="mailto:gontsanasinekhaya@gmail.com">gontsanasinekhaya@gmail.com</a></li>
-                <li><strong>Freelance:</strong> Available</li>
-                <li><strong>Degree:</strong> BSc in Computer Science & Statistics</li>
-              </ul>
-            </div>
+  <!-- Left Column -->
+  <div class="col-md-6">
+    <ul class="list-unstyled">
+      <li class="mb-3">
+        <strong><i class="bi bi-folder2-open-fill me-2"></i>Data Projects:</strong>
+        <ul class="list-unstyled ms-4">
+          <li class="mb-1">
+            <a href="https://sinekhaya.shinyapps.io/Claimly_Visual_Dashboard/" target="_blank" class="text-decoration-none text-primary fw-bold">
+              <i class="bi bi-bar-chart-line-fill me-1"></i>Claimly Visual Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="https://sinekhaya.shinyapps.io/Tshiamo_Survey_Dashboard-2/" target="_blank" class="text-decoration-none text-primary fw-bold">
+              <i class="bi bi-pie-chart-fill me-1"></i>Tshiamo Survey Dashboard
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="mb-2"><i class="bi bi-calendar-event-fill me-2"></i><strong>Birthday:</strong> 20 November 1997</li>
+      <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i><strong>Phone:</strong> +27 764 054 464</li>
+      <li><i class="bi bi-geo-alt-fill me-2"></i><strong>City:</strong> Johannesburg, RSA</li>
+    </ul>
+  </div>
 
-          </div>
+  <!-- Right Column -->
+  <div class="col-md-6">
+    <ul class="list-unstyled">
+      <li class="mb-2"><i class="bi bi-person-badge-fill me-2"></i><strong>Age:</strong> 28</li>
+      <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong> 
+        <a href="mailto:gontsanasinekhaya@gmail.com" class="text-decoration-none text-success fw-bold">
+          gontsanasinekhaya@gmail.com
+        </a>
+      </li>
+      <li class="mb-2"><i class="bi bi-briefcase-fill me-2"></i><strong>Freelance:</strong> Available</li>
+      <li><i class="bi bi-mortarboard-fill me-2"></i><strong>Degree:</strong> BSc in Computer Science & Statistics</li>
+    </ul>
+  </div>
 
-          <!-- Closing Paragraph -->
-          <p>
+</div>
+
+<!-- Optional CSS for hover effects -->
+<style>
+  a.text-primary:hover, a.text-success:hover {
+    text-decoration: underline;
+    color: #0d6efd !important;
+    transition: 0.3s;
+  }
+  i {
+    color: #0d6efd;
+  }
+</style>
             I am passionate about solving real-world problems through code and data. Each project fuels my curiosity and growth, and I am always ready to embrace new challenges with purpose and precision.
           </p>
         </div>
@@ -274,107 +298,106 @@
 <!-- ======= Certifications Section ======= -->
 <section id="certifications" class="certifications section position-relative py-5">
 
-  <!-- Background Image -->
-  <div class="certifications-bg"></div>
+ <div class="container position-relative" data-aos="fade-up">
 
-  <!-- Overlay -->
-  <div class="certifications-overlay"></div>
+  <!-- Section Title with Background -->
+  <div class="section-title text-center mb-5 position-relative">
+    
+    <!-- Background graphic (subtle circles / abstract shapes) -->
+    <div class="title-bg-shapes"></div>
 
-  <div class="container position-relative" data-aos="fade-up">
+    <h2 class="fw-bold gradient-text position-relative d-inline-block">
+      Certifications
+      <span class="section-underline"></span>
+    </h2>
 
-    <!-- Section Title -->
-    <div class="section-title text-center mb-5">
-      <h2>Certifications</h2>
-      <p class="certifications-intro">
-        Here are some of the professional certifications and courses I've completed to enhance my skills
-        in software development, data analytics, and AI technologies.
-      </p>
-    </div>
+    <p class="text-muted fs-6 mt-3">
+      Professional certifications and courses enhancing my skills in software development, data analytics, and AI technologies.
+    </p>
+  </div>
+
+</div>
 
     <!-- Certificates Grid -->
-    <div class="row g-4 align-items-stretch justify-content-center">
-      <!-- Certificate cards go here -->
+    <div class="row g-4 justify-content-center">
 
-      <!-- Certificate Card Template (Repeat for all certificates) -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <!-- Certificate Card Template -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">API</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">API</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM Coursera<br>
               <strong>Completed:</strong> 2019<br>
-              <strong>Skills:</strong> JSON, API, API Design, API Economy, API Lifecycle, API REST, Watson REST API, PWID-B0143300
+              <strong>Skills:</strong> JSON, API Design, REST, Watson REST API, PWID-B0143300
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/edit#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
         </div>
       </div>
 
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Artificial Intelligence Intro</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Artificial Intelligence Intro</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
-              <strong>Skills:</strong> Artificial Intelligence, Augmented Intelligence, Machine Learning, NLP, PWID-B0368300
+              <strong>Skills:</strong> AI, Machine Learning, NLP, Augmented Intelligence, PWID-B0368300
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
         </div>
       </div>
 
-      <!-- Cloud Database -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Cloud Database</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Cloud Database</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
-              <strong>Skills:</strong> Cloud Application, Data Services, Cloud Computing, Cloud Database, IBM Cloud, Cloudant, REST API, PWID-B0410600
+              <strong>Skills:</strong> Cloud Application, Cloud Database, IBM Cloud, REST API, PWID-B0410600
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
         </div>
       </div>
 
-      <!-- Cloud Intro -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Cloud Intro</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Cloud Intro</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
-              <strong>Skills:</strong> Cloud Computing, Hybrid Cloud, IaaS, PaaS, Private Cloud, SaaS, PWID-B0041900
+              <strong>Skills:</strong> Cloud Computing, Hybrid Cloud, IaaS, PaaS, SaaS, PWID-B0041900
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
         </div>
       </div>
 
-      <!-- Coding Intro -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Coding Intro</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Coding Intro</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
               <strong>Skills:</strong> Block Programming, Coding, PWID-B0353300
@@ -384,15 +407,14 @@
         </div>
       </div>
 
-      <!-- Cybersecurity Intro -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Cybersecurity Intro</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Cybersecurity Intro</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
               <strong>Skills:</strong> Cybersecurity, Incident Response, PWID-B0183800
@@ -403,14 +425,14 @@
       </div>
 
       <!-- Data Science Fundamentals -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Data Science Fundamentals</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Data Science Fundamentals</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
               <strong>Skills:</strong> Analytics, Big Data, CRISP-DM, Supervised & Unsupervised Learning, Structured & Unstructured Data
@@ -421,17 +443,17 @@
       </div>
 
       <!-- HTML & CSS -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">HTML & CSS</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">HTML & CSS</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
-              <strong>Skills:</strong> HTML, HTML5, CSS, CSS3, Web Page Layout, Media Elements, Tags, PWID-B0165900
+              <strong>Skills:</strong> HTML5, CSS3, Web Layout, Media Elements, PWID-B0165900
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
@@ -439,14 +461,14 @@
       </div>
 
       <!-- Web Development -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Web Development</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Web Development</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
               <strong>Skills:</strong> Application Server, Data Tier, Business Logic, Web Architecture, PWID-B0464500
@@ -455,36 +477,37 @@
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
         </div>
       </div>
-<!-- Java -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+
+      <!-- Java -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Java</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Java</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2020<br>
-              <strong>Skills:</strong> Arrays, Conditional Operators, Control Statements, Loops, OOP, Java Frameworks, Java Syntax, Polymorphism, PWID-B0094000
+              <strong>Skills:</strong> Arrays, Loops, OOP, Java Frameworks, Polymorphism, PWID-B0094000
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
         </div>
       </div>
 
-      <!-- GIT -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <!-- Git -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">GIT</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">GIT</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2020<br>
-              <strong>Skills:</strong> Command-line, Git Repositories, Linux Shell, Tagging, Vim Editor, PWID-B0080800
+              <strong>Skills:</strong> Git Repositories, Command-line, Linux Shell, Tagging, PWID-B0080800
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
@@ -492,17 +515,17 @@
       </div>
 
       <!-- Express Web Framework V2 -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Express Web Framework V2</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Express Web Framework V2</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2021<br>
-              <strong>Skills:</strong> Express Framework, Node.js, Route Handling, Web Application, PWID-B0303900
+              <strong>Skills:</strong> Express Framework, Node.js, Route Handling, Web App, PWID-B0303900
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
@@ -510,17 +533,17 @@
       </div>
 
       <!-- Javascript -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Javascript</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Javascript</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2021<br>
-              <strong>Skills:</strong> Arrays, Conditional Statements, Loops, Functions, Operators, Variables, Syntax, PWID-B0460000
+              <strong>Skills:</strong> Arrays, Loops, Functions, Operators, Variables, PWID-B0460000
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/badges#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
@@ -528,14 +551,14 @@
       </div>
 
       <!-- Node.js V2 -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Node.js V2</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Node.js V2</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
               <strong>Skills:</strong> Asynchronous I/O, Callbacks, Server-side JS, Node Modules, PWID-B0104800
@@ -546,14 +569,14 @@
       </div>
 
       <!-- Cloud Computing V2 -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Cloud Computing V2</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Cloud Computing V2</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2019<br>
               <strong>Skills:</strong> Cloud Architecture, Cloud Services, IBM Cloud, PWID-B0049700
@@ -564,44 +587,129 @@
       </div>
 
       <!-- Data Analytics -->
-      <div class="col-lg-6 col-md-12">
-        <div class="card shadow-sm border-0 p-4 h-100 bg-light bg-opacity-75 d-flex flex-column justify-content-between hover-scale">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-0 p-4 bg-gradient-light hover-zoom d-flex flex-column">
           <div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-award-fill text-primary me-2"></i>
-              <h5 class="card-title mb-0">Data Analytics</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award-fill text-primary fs-4 me-2"></i>
+              <h5 class="card-title mb-0 fw-bold">Data Analytics</h5>
             </div>
-            <p class="card-text mb-3">
+            <p class="card-text text-muted mb-3 small">
               <strong>Institution:</strong> IBM<br>
               <strong>Completed:</strong> 2025<br>
-              <strong>Skills:</strong> Cognos Analytics, Data Analysis, Data Lakes, Data Warehousing, Excel, NoSQL, RDBMS, Data Visualization, PWID-B0270400
+              <strong>Skills:</strong> Cognos Analytics, Data Lakes, Warehousing, RDBMS, NoSQL, Data Visualization, Excel, PWID-B0270400
             </p>
           </div>
           <a href="https://www.credly.com/users/sinekhayagontsana.student.com/edit#credly" target="_blank" class="btn btn-primary btn-sm mt-auto">View Certificate</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-<!-- ======= Resume Section ======= -->
-<section id="resume" class="resume section py-5" style="background-color: #f8f9fa;"> 
-  <div class="container text-center" data-aos="fade-up">
 
-    <!-- Section Title -->
-    <div class="section-title mb-5">
-      <h2>Resume</h2>
-      <p>I take pride in delivering high-quality work that balances innovation with reliability. I approach every challenge with responsibility, commitment, and a problem-solving mindset. I'm driven by curiosity, focused on results, and ready to deliver real value.</p>
+<style>
+  /* Gradient heading */
+  .gradient-text {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    font-weight: 900;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  /* Animated underline */
+  .section-underline {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    border-radius: 2px;
+    margin: 8px auto 0 auto;
+    transition: width 1s ease-in-out;
+  }
+  .gradient-text + .section-underline {
+    width: 100px;
+  }
+
+  /* Subtitle styling */
+  .section-title p {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(85, 85, 85, 0.9);
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Background shapes behind the heading */
+  .title-bg-shapes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(13,110,253,0.1) 0%, rgba(102,16,242,0.05) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    filter: blur(60px);
+  }
+
+  /* Bordered container for section title */
+  .bordered-title {
+    border: 3px solid #0d6efd;
+    position: relative;
+    overflow: hidden;
+    max-width: 850px;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gradient-text {
+      font-size: 2.2rem;
+    }
+    .title-bg-shapes {
+      width: 250px;
+      height: 250px;
+      filter: blur(50px);
+    }
+  }
+</style>
+<!-- ======= End of Certification ======= -->
+<!-- ======= Resume Section ======= -->
+<section id="resume" class="resume section py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Resume Container with Border -->
+    <div class="resume-container shadow-sm">
+      <!-- Section Title inside border -->
+      <div class="section-title text-center mb-4">
+        <h2 class="fw-bold gradient-text">Resume</h2>
+        <p class="text-muted">
+          I take pride in delivering high-quality work that balances innovation with reliability.
+          I approach every challenge with responsibility, commitment, and a problem-solving mindset.
+          I'm driven by curiosity, focused on results, and ready to deliver real value.
+        </p>
+      </div>
+      <!-- View/Download Button -->
+      <div class="text-center">
+        <a href="assets/doc/Sinekhaya_Advocate_Gontsana_Resume.pdf" target="_blank" 
+           class="btn btn-primary btn-lg shadow resume-btn">
+           View / Download Resume
+        </a>
+      </div>
     </div>
 
-    <!-- View/Download Button -->
-    <a href="assets/doc/Sinekhaya_Advocate_Gontsana_Resume.pdf" target="_blank" 
-       class="btn btn-primary btn-lg shadow" 
-       style="padding: 12px 30px; font-size: 1.1rem; transition: transform 0.2s;">
-       View / Download Resume
-    </a>
-
   </div>
-</section><!-- /Resume Section -->
+</section>
 
 <!-- ======= Portfolio Section ======= -->
 <section id="portfolio" class="portfolio section py-5 bg-light">
@@ -609,7 +717,7 @@
 
     <!-- Section Header -->
     <div class="section-header text-center mb-5">
-      <h2 class="fw-bold">My Portfolio</h2>
+      <h2 class="fw-bold">My Rescent Project</h2>
       <p class="text-muted">Explore some of my recent projects showcasing my skills in software, data analysis, and design.</p>
     </div>
 
@@ -824,223 +932,6 @@
   </div>
 </section><!-- End Portfolio Section -->
 
-<!-- ======= Portfolio Card Hover Effect CSS ======= -->
-<style>
-.portfolio-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-.portfolio-info h5 {
-  min-height: 3em; /* Keeps cards uniform */
-}
-</style>
-
-<!-- ======= Services Section ======= -->
-<section id="services" class="services section py-5" style="background-color: #f8f9fa;">
-  <div class="container">
-    <!-- Section Title -->
-    <div class="section-title text-center mb-5" data-aos="fade-up">
-      <h2>Services</h2>
-      <p>Solving complex problems and delivering accurate, data-driven solutions requires skill, diligence, and precision.</p>
-    </div>
-
-    <div class="row g-4">
-      <!-- Service Card Template -->
-<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale" 
-       data-bs-toggle="modal" data-bs-target="#analyticsModal" style="cursor:pointer;">
-    <div class="icon mb-3">
-      <i class="bi bi-graph-up-arrow display-4 text-primary"></i>
-    </div>
-    <h4 class="title">Data Analytics & Visualization</h4>
-    <p class="description">Turning complex data into clear, insightful visuals that support smarter decisions.</p>
-    <ul class="small">
-      <li>Data cleaning & transformation</li>
-      <li>Dashboard creation (Excel, Power BI, Python)</li>
-      <li>Visual storytelling & reporting</li>
-      <li>KPI tracking & actionable insights</li>
-    </ul>
-  </div>
-</div>
-
-     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
-       data-bs-toggle="modal"
-       data-bs-target="#softwareModal"
-       style="cursor: pointer;">
-
-    <div class="icon mb-3">
-      <i class="bi bi-laptop display-4 text-success"></i>
-    </div>
-
-    <h4 class="title">
-      Applied Computer Science & Software Solutions
-    </h4>
-
-    <p class="description">
-      Designing and building reliable, scalable software solutions that solve real-world problems.
-    </p>
-
-    <ul class="small mb-0">
-      <li>Java & Spring Boot backend development</li>
-      <li>Web development (HTML, CSS, Bootstrap)</li>
-      <li>RESTful APIs & full CRUD implementations</li>
-      <li>C++ & strong object-oriented design</li>
-    </ul>
-
-  </div>
-</div>
-
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
-       onclick="window.open('https://www.credly.com/badges/9d4d49b3-14a7-40a8-8113-578fdd8e35e9', '_blank')"
-       style="cursor: pointer;">
-
-    <div class="icon mb-3">
-      <i class="bi bi-hdd-stack display-4 text-warning"></i>
-    </div>
-
-    <h4 class="title">
-      Data Engineering Services
-    </h4>
-
-    <p class="description">
-      Designing and maintaining robust data pipelines and infrastructure that ensure data quality, reliability, and scalability.
-    </p>
-
-    <ul class="small mb-0">
-      <li>SQL & MySQL for structured data storage</li>
-      <li>Data modeling & integration using R</li>
-      <li>Python automation & ETL scripting</li>
-      <li>Pipeline monitoring & troubleshooting</li>
-    </ul>
-
-    <small class="text-muted d-block mt-2">
-      View verified credential on Credly
-    </small>
-
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
-       onclick="window.open('https://www.credly.com/badges/82e812e4-30e4-4a41-802b-5e6a76a79e10', '_blank')"
-       style="cursor: pointer;">
-
-    <div class="icon mb-3">
-      <i class="bi bi-robot display-4 text-danger"></i>
-    </div>
-
-    <h4 class="title">
-      AI & Machine Learning
-    </h4>
-
-    <p class="description">
-      Applying machine learning techniques to forecast trends, automate tasks, and power intelligent systems.
-    </p>
-
-    <ul class="small mb-0">
-      <li>Data modeling with Scikit-learn</li>
-      <li>Classification, regression & clustering</li>
-      <li>Feature engineering & model evaluation</li>
-      <li>Python & Jupyter Notebooks</li>
-    </ul>
-
-    <small class="text-muted d-block mt-2">
-      View verified AI credential on Credly
-    </small>
-
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
-       data-bs-toggle="modal"
-       data-bs-target="#statisticsModal"
-       style="cursor: pointer;">
-
-    <div class="icon mb-3">
-      <i class="bi bi-bar-chart-line display-4 text-info"></i>
-    </div>
-
-    <h4 class="title">
-      Academic Research & Statistical Analysis
-    </h4>
-
-    <p class="description">
-      Leveraging a strong academic foundation in Statistics for rigorous analysis and evidence-based insights.
-    </p>
-
-    <ul class="small mb-0">
-      <li>Statistical testing & hypothesis validation</li>
-      <li>R programming for statistical analysis</li>
-      <li>Data visualization & academic reporting</li>
-      <li>Predictive modeling & correlation analysis</li>
-    </ul>
-
-  </div>
-</div>
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
-       data-bs-toggle="modal"
-       data-bs-target="#mathModal"
-       style="cursor: pointer;">
-
-    <div class="icon mb-3">
-      <i class="bi bi-calculator display-4 text-secondary"></i>
-    </div>
-
-    <h4 class="title">
-      Mathematics & Problem Solving
-    </h4>
-
-    <p class="description">
-      Applying advanced mathematics to model, analyze, and solve complex technical problems.
-    </p>
-
-    <ul class="small mb-0">
-      <li>Calculus & Linear Algebra</li>
-      <li>Differential & Ordinary Equations</li>
-      <li>Real & Numerical Analysis</li>
-      <li>Algorithm design & data modeling</li>
-    </ul>
-
-  </div>
-</div>
-    </div>
-  </div>
-</section>
-
-<!-- CSS for hover effect -->
-<style>
-  .hover-scale {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .hover-scale:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .service-card .icon i {
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-
-  .service-card:hover .icon i {
-    transform: rotate(10deg) scale(1.1);
-    color: #007bff;
-  }
-
-  .service-card ul {
-    padding-left: 1rem;
-    margin-top: 0.5rem;
-  }
-</style>
 
 <!-- ===== Testimonials Section ===== -->
 <section id="testimonials" class="testimonials section light-background py-5">
