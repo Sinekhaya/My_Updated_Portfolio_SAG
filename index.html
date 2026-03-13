@@ -685,6 +685,7 @@
 </style>
 <!-- ======= End of Certification ======= -->
 <!-- ======= Resume Section ======= -->
+<!-- ======= Resume Section ======= -->
 <section id="resume" class="resume section py-5 bg-light">
   <div class="container" data-aos="fade-up">
 
@@ -932,6 +933,223 @@
   </div>
 </section><!-- End Portfolio Section -->
 
+<!-- ======= Portfolio Card Hover Effect CSS ======= -->
+<style>
+.portfolio-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.portfolio-info h5 {
+  min-height: 3em; /* Keeps cards uniform */
+}
+</style>
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services section py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="section-title text-center mb-5" data-aos="fade-up">
+      <h2>Services</h2>
+      <p>Solving complex problems and delivering accurate, data-driven solutions requires skill, diligence, and precision.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Service Card Template -->
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale" 
+       data-bs-toggle="modal" data-bs-target="#analyticsModal" style="cursor:pointer;">
+    <div class="icon mb-3">
+      <i class="bi bi-graph-up-arrow display-4 text-primary"></i>
+    </div>
+    <h4 class="title">Data Analytics & Visualization</h4>
+    <p class="description">Turning complex data into clear, insightful visuals that support smarter decisions.</p>
+    <ul class="small">
+      <li>Data cleaning & transformation</li>
+      <li>Dashboard creation (Excel, Power BI, Python)</li>
+      <li>Visual storytelling & reporting</li>
+      <li>KPI tracking & actionable insights</li>
+    </ul>
+  </div>
+</div>
+
+     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
+       data-bs-toggle="modal"
+       data-bs-target="#softwareModal"
+       style="cursor: pointer;">
+
+    <div class="icon mb-3">
+      <i class="bi bi-laptop display-4 text-success"></i>
+    </div>
+
+    <h4 class="title">
+      Applied Computer Science & Software Solutions
+    </h4>
+
+    <p class="description">
+      Designing and building reliable, scalable software solutions that solve real-world problems.
+    </p>
+
+    <ul class="small mb-0">
+      <li>Java & Spring Boot backend development</li>
+      <li>Web development (HTML, CSS, Bootstrap)</li>
+      <li>RESTful APIs & full CRUD implementations</li>
+      <li>C++ & strong object-oriented design</li>
+    </ul>
+
+  </div>
+</div>
+
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
+       onclick="window.open('https://www.credly.com/badges/9d4d49b3-14a7-40a8-8113-578fdd8e35e9', '_blank')"
+       style="cursor: pointer;">
+
+    <div class="icon mb-3">
+      <i class="bi bi-hdd-stack display-4 text-warning"></i>
+    </div>
+
+    <h4 class="title">
+      Data Engineering Services
+    </h4>
+
+    <p class="description">
+      Designing and maintaining robust data pipelines and infrastructure that ensure data quality, reliability, and scalability.
+    </p>
+
+    <ul class="small mb-0">
+      <li>SQL & MySQL for structured data storage</li>
+      <li>Data modeling & integration using R</li>
+      <li>Python automation & ETL scripting</li>
+      <li>Pipeline monitoring & troubleshooting</li>
+    </ul>
+
+    <small class="text-muted d-block mt-2">
+      View verified credential on Credly
+    </small>
+
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
+       onclick="window.open('https://www.credly.com/badges/82e812e4-30e4-4a41-802b-5e6a76a79e10', '_blank')"
+       style="cursor: pointer;">
+
+    <div class="icon mb-3">
+      <i class="bi bi-robot display-4 text-danger"></i>
+    </div>
+
+    <h4 class="title">
+      AI & Machine Learning
+    </h4>
+
+    <p class="description">
+      Applying machine learning techniques to forecast trends, automate tasks, and power intelligent systems.
+    </p>
+
+    <ul class="small mb-0">
+      <li>Data modeling with Scikit-learn</li>
+      <li>Classification, regression & clustering</li>
+      <li>Feature engineering & model evaluation</li>
+      <li>Python & Jupyter Notebooks</li>
+    </ul>
+
+    <small class="text-muted d-block mt-2">
+      View verified AI credential on Credly
+    </small>
+
+  </div>
+</div>
+
+
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
+       data-bs-toggle="modal"
+       data-bs-target="#statisticsModal"
+       style="cursor: pointer;">
+
+    <div class="icon mb-3">
+      <i class="bi bi-bar-chart-line display-4 text-info"></i>
+    </div>
+
+    <h4 class="title">
+      Academic Research & Statistical Analysis
+    </h4>
+
+    <p class="description">
+      Leveraging a strong academic foundation in Statistics for rigorous analysis and evidence-based insights.
+    </p>
+
+    <ul class="small mb-0">
+      <li>Statistical testing & hypothesis validation</li>
+      <li>R programming for statistical analysis</li>
+      <li>Data visualization & academic reporting</li>
+      <li>Predictive modeling & correlation analysis</li>
+    </ul>
+
+  </div>
+</div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+  <div class="service-card p-4 h-100 rounded shadow-sm bg-white hover-scale"
+       data-bs-toggle="modal"
+       data-bs-target="#mathModal"
+       style="cursor: pointer;">
+
+    <div class="icon mb-3">
+      <i class="bi bi-calculator display-4 text-secondary"></i>
+    </div>
+
+    <h4 class="title">
+      Mathematics & Problem Solving
+    </h4>
+
+    <p class="description">
+      Applying advanced mathematics to model, analyze, and solve complex technical problems.
+    </p>
+
+    <ul class="small mb-0">
+      <li>Calculus & Linear Algebra</li>
+      <li>Differential & Ordinary Equations</li>
+      <li>Real & Numerical Analysis</li>
+      <li>Algorithm design & data modeling</li>
+    </ul>
+
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS for hover effect -->
+<style>
+  .hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card .icon i {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .service-card:hover .icon i {
+    transform: rotate(10deg) scale(1.1);
+    color: #007bff;
+  }
+
+  .service-card ul {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+  }
+</style>
 
 <!-- ===== Testimonials Section ===== -->
 <section id="testimonials" class="testimonials section light-background py-5">
